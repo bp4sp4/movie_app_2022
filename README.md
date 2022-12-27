@@ -23,7 +23,7 @@ function App() {
 
 export default App;
 ```
-<br>
+
 <h4>props 사용한 Component 만들기</h4>
 ```c
 
