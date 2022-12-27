@@ -7,7 +7,7 @@ React JS Fundamentals Course 2020
 <h4>클론코딩 영화평점 웹서비스 90p / 공부시간 : 1시간20분 </h4>
 
 <h4>기본 Component 만들기</h4>
-```c
+```java
 
  function Potato() {
     return <h1>I like poaato</h1>
@@ -23,11 +23,11 @@ function App() {
 }
 
 export default App;
-
+```
 
 <h4>props 사용한 Component 만들기</h4>
 
-```c
+```java
 
  function Food(props) {
     { fav } = props;
@@ -50,7 +50,8 @@ export default App;
 <br>
 <h4>map 사용한 Component 만들기</h4>
 
-```c
+```java
+
  function Food({ name, picture }) {
   return (
   <div>
