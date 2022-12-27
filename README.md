@@ -8,6 +8,7 @@ React JS Fundamentals Course 2020
 
 <h4>기본 Component 만들기</h4>
 ```c
+
  function Potato() {
     return <h1>I like poaato</h1>
 }
@@ -22,9 +23,10 @@ function App() {
 }
 
 export default App;
-```
+
 
 <h4>props 사용한 Component 만들기</h4>
+
 ```c
 
  function Food(props) {
