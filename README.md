@@ -6,7 +6,9 @@ React JS Fundamentals Course 2020
 
 <h4>클론코딩 영화평점 웹서비스 128p  </h4>
 <h4> state로 숫자 증감 기능만들기</h4>
+
 ```java
+
 import React from "react";
 
 class App extends React.Component{
@@ -35,28 +37,32 @@ Minus = () => {
     );
   }
 }
-
 export default App;
 
 ```
 
 <h4>prop-types 경고 해결하기</h4>
+
 ```java
+
 Food.prototype = {
   name : PropTypes.string.isRequire,
   picture : PropTypes.string.isRequired,
   rating : PropTypes.number,
 };
+
 ```
 
 
 <h4>prop-types 설치</h4>
+
 ```java
 npm install prop-types
 ```
 <h4>rating(점수)추가</h4>
 
 ```java
+
 const foodILike = [
   {
     id : 1,
