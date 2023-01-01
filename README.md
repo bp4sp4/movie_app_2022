@@ -1,10 +1,112 @@
-# Movie App 2020
+# Movie App 2022.12 ~2023.01
 # React Study 
 React JS Fundamentals Course 2020
 
-<h1>12/28</h1>
+<h1>23.01/01</h1>
 
-<h4>클론코딩 영화평점 웹서비스 90p / 공부시간 : 1시간20분 </h4>
+<h4>클론코딩 영화평점 웹서비스 128p  </h4>
+<h4> state로 숫자 증감 기능만들기</h4>
+```java
+import React from "react";
+
+class App extends React.Component{
+  state = {
+    count : 0,
+  };
+add = () => {
+  this.setState( current => ({
+    count : current.count + 1,
+  }))
+};
+
+Minus = () => {
+  this.setState(current => ({
+  count : current.count -1,
+}))
+};
+
+  render() {
+    return (
+     < div>
+     <h1>The number is : {this.state.count}</h1>
+     <button onClick={this.add}>Add</button>
+     <button onClick={this.Minus}>Minus</button>
+    </div>
+    );
+  }
+}
+
+export default App;
+
+```
+
+<h4>prop-types 경고 해결하기</h4>
+```java
+Food.prototype = {
+  name : PropTypes.string.isRequire,
+  picture : PropTypes.string.isRequired,
+  rating : PropTypes.number,
+};
+```
+
+
+<h4>prop-types 설치</h4>
+```java
+npm install prop-types
+```
+<h4>rating(점수)추가</h4>
+
+```java
+const foodILike = [
+  {
+    id : 1,
+    name : 'kimchi',
+    image : 'https://img.hankyung.com/photo/202108/99.27186019.1.jpg',
+    rating : 5,
+  },
+  {
+    id: 2,
+    name : 'bosamg',
+    image : 'https://i.ytimg.com/vi/R9XHCBRhztY/maxresdefault.jpg',
+    rating : 4.5,
+  },
+];
+
+```
+
+<h4>map()함수로 만든 컴포턴트에 key props추가 </h4>
+
+```java
+(생략...)
+const foodILike = [
+  {
+    id : 1,
+    name : 'kimchi',
+    image : 'https://img.hankyung.com/photo/202108/99.27186019.1.jpg',
+  },
+  {
+    id: 2,
+    name : 'bosamg',
+    image : 'https://i.ytimg.com/vi/R9XHCBRhztY/maxresdefault.jpg',
+  },
+];
+
+function App() {
+  
+  return (
+  <div>
+    {foodILike.map(dish => (
+    <Food key={dish.id} name={dish.name} picture={dish.image} 
+    rating={dish.rating}/>))}
+    </div>
+    
+  );
+}
+(생략...)
+```
+<h1>22.12/28</h1>
+
+<h4>클론코딩 영화평점 웹서비스 90p</h4>
 
 <h4>기본 Component 만들기</h4>
 

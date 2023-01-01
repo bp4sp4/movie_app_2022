@@ -1,33 +1,30 @@
 import React from "react";
 
-function Food({ name, picture }) {
-  return (
-  <div>
-  <h1>I like {name}</h1>
-  <img src={picture} />
-  </div>
-  );
-}
+class App extends React.Component{
+  state = {
+    count : 0,
+  };
+add = () => {
+  this.setState( current => ({
+    count : current.count + 1,
+  }))
+};
 
-const foodILike = [
-  {
-    name : 'kimchi',
-    image : 'https://img.hankyung.com/photo/202108/99.27186019.1.jpg',
-  },
-  {
-    name : 'bosamg',
-    image : 'https://i.ytimg.com/vi/R9XHCBRhztY/maxresdefault.jpg',
-  },
-];
+Minus = () => {
+  this.setState(current => ({
+  count : current.count -1,
+}))
+};
 
-function App() {
-  
-  return (
-  <div>
-    {foodILike.map(dish => (
-    <Food name={dish.name} picture={dish.image} />))}
+  render() {
+    return (
+     < div>
+     <h1>The number is : {this.state.count}</h1>
+     <button onClick={this.add}>Add</button>
+     <button onClick={this.Minus}>Minus</button>
     </div>
-  );
+    );
+  }
 }
 
 export default App;
