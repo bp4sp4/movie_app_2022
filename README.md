@@ -2,6 +2,77 @@
 # React Study 
 React JS Fundamentals Course 2020
 
+<h1>23.01/05</h1>
+<h4>클론코딩 영화평점 웹서비스 140p  </h4>
+<h4>6초후에 로딩화면 바꾸기 </h4>
+
+```java
+import React from "react";
+
+class App extends React.Component{
+
+ state = {
+    isLoding : true,
+    movies: [],
+    };
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({ isLoding : false});
+    }, 6000);
+  }
+
+  render() {
+    const { isLoding } = this.state;
+    return <div>{isLoding ? 'Loading...' : 'We are ready'}</div>;
+  }
+}
+
+
+export default App;
+
+```
+
+<h4>영화 앱 만들기 워밍업 로딩상태 표시 </h4>
+
+```java
+import React from "react";
+
+class App extends React.Component{
+
+ state = {
+    isLoding : true,
+    };
+
+  render() {
+    const { isLoding } = this.state;
+    return <div>{isLoding ? 'Loading...' : 'We are ready'}</div>;
+  }
+}
+
+
+export default App;
+```
+
+
+<h4>component의 일생</h4>
+
+```java
+(..생략)
+componentDidMount() {
+  console.log('component renderd');
+}
+componentDidUpdate(){
+  console.log('component update');
+}
+componentWillUnmount(){
+  console.log('goodbye, cruel world');
+}
+  render() {
+    console.log("i'm rendering");
+    return (
+(...생략)
+```
+
 <h1>23.01/01</h1>
 
 <h4>클론코딩 영화평점 웹서비스 128p  </h4>
