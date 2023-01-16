@@ -2,6 +2,8 @@
 # React Study 
 React JS Fundamentals Course 2020
 
+test
+
 <h1>23.01/05</h1>
 <h4>클론코딩 영화평점 웹서비스 140p  </h4>
 <h4>6초후에 로딩화면 바꾸기 </h4>
