@@ -2,7 +2,6 @@
 # React Study 
 React JS Fundamentals Course 2020
 
-test
 
 <h1>23.01/05</h1>
 <h4>클론코딩 영화평점 웹서비스 140p  </h4>
